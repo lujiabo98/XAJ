@@ -1,0 +1,26 @@
+HKCR
+{
+	XAJ.Model.1 = s 'Model class'
+	{
+		CLSID = s '{e002b0ec-9a5c-44c8-8b96-bb7648d05f25}'
+	}
+	XAJ.Model = s 'Model class'
+	{		
+		CurVer = s 'XAJ.Model.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {e002b0ec-9a5c-44c8-8b96-bb7648d05f25} = s 'Model class'
+		{
+			ProgID = s 'XAJ.Model.1'
+			VersionIndependentProgID = s 'XAJ.Model'
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{94233707-a67e-4579-9cba-8e92fbf8ee01}'
+			Version = s '1.0'
+		}
+	}
+}
