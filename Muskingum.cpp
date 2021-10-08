@@ -1,5 +1,4 @@
-﻿#include "pch.h"
-#include "Muskingum.h"
+﻿#include "Muskingum.h"
 
 void Muskingum::SetParmameter(const Parameter* parameter)
 {

@@ -49,10 +49,10 @@ int main(int argc, char* argv[])
 	Source source;   //流域分水源
 	source.SetParmameter(&parameter);  //设置参数
 
-	Confluence confluence;   //呈村流域汇流
+	Confluence confluence;   //流域汇流
 	confluence.SetParmameter(&parameter);  //设置参数
 
-	Muskingum muskingum;    //呈村流域河道汇流
+	Muskingum muskingum;    //流域河道汇流
 	muskingum.SetParmameter(&parameter);  //设置参数
 
 	//逐时段逐单元流域计算
@@ -63,7 +63,7 @@ int main(int argc, char* argv[])
 
 	for (int nt = 0; nt < nT; nt++)
 	{
-			state[0].m_Q = 0.0;;   //m_Q置为0
+			state[0].m_Q = 0.0;   //m_Q置为0
 
 		for (int nw = 0; nw < nW; nw++)
 		{

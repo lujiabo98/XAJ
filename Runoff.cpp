@@ -62,7 +62,7 @@ void Runoff::calculate()
 
 	PE = P - EP;
 
-	if (PE <= 0)
+	if (PE <= 1e-5)    //这里认为净雨量小于1e-5时即为小于等于0
 	{
 		R = 0.0;
 
@@ -80,7 +80,6 @@ void Runoff::calculate()
 		}
 
 		RIM = PE * IM;   //计算不透水面积上的产流量
-
 	}
 
 	//========计算下一时段初土壤含水量========//
